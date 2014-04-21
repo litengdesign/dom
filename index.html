@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="zh-hans">
+<head>
+	<meta charset="UTF-8">
+	<title>html+css+js</title>
+	<!--global css-->
+	<!--link rel="stylesheet" href="style.css"/-->
+	<!--less-->
+	<link rel="stylesheet/less"  href="less.less">
+<!--less.js-->
+<script src="http://cdn.bootcss.com/less.js/1.7.0/less.min.js"></script>
+<!--jquery-->
+<script src="http://cdn.bootcss.com/jquery/2.1.0/jquery.min.js"></script>
+<!--application js-->
+<script src="application.js" type="text/javascript" charset="utf-8" async defer></script>
+</head>
+<body>
+	<!--head region code-->
+	<header>
+		<nav>
+			<ul>
+				<li><a href="#html">HTML</a></li>
+				<li><a href="#css">CSS</a></li>
+				<li>	<a href="#js">JAVASCRIPT</a></li>
+				<li>	<a href="#less">LESS</a></li>
+				<li>	<a href="#jquery">JQUERY</a></li>
+			</ul>
+		</nav>
+	</header>
+	<!--wrap region code-->
+	<section id="wrap">
+		<article>
+		       <h2>使页面内容可以编辑的属性：contentEditable
+		       </h2>	
+		      <blockquote>
+			       <h2>contentEditable:true</h2>
+			      <code>document.body.contentEditable='true';</code>
+		      </blockquote>
+		</article>
+		<article>
+			<h2>DOM节点的增删改查</h2>
+			<!--增加DOM-->
+			<blockquote>
+				<h2>append():追加节点</h2>
+                          <code>parent.appendChild(child)</code>
+			</blockquote>
+			<div id="parent">
+			</div>
+			<button  type="button" onclick="append()">append</button>
+			<hr>
+			<!--删除DOM-->
+			<blockquote>
+				<h2>remove()删除方法/parent.removeChild(id)</h2>
+                          <code>parent.appendChild(child)</code>
+			</blockquote>    
+			 <div id="delete">可删除的div</div>
+                   <button  type="button" onclick="removeNode()">remove</button>               
+                   <hr>
+                   <!--DOM修改-->
+                   <blockquote>   
+ 				<h2>innerHTML()</h2>
+                          <code>update.innerHTML="  ";</code>
+			</blockquote>                      
+                   <div id="update">我的内容可以更新的</div>
+                   <button type="button" onclick="update()">更新update的内容</button>
+                    <hr>
+                   <!--DOM查询-->
+                   <blockquote>   
+ 				<h2>getElementById()</h2>
+                          <code>var myid=document.getElementById("myid");</code>
+			</blockquote>   
+                   <div id="myid">getElementById</div>
+                   <button type="button" onclick="selectid()">getElementById()</button>			                    
+                   <hr>
+		</article>
+		<article>
+		      <h1>BOM学习</h1>
+		      <h2>获取当前窗口Browser 的各个属性</h2>
+		      <blockquote>
+		      	     <h2>clientWidth</h2>
+		      	     <code>document.body.clientWidth</code>
+		      </blockquote>
+		      <p id="width"></p>		      
+		      <blockquote>
+		      	     <h2>clientHeight</h2>
+		      	     <code>document.body.clientHeight</code>
+		      </blockquote>		      
+		       <p id="height"></p>
+		       <h2>不包含滑动条的宽高</h2>
+		      <blockquote>
+		      	     <h2>innerWidth</h2>
+		      	     <code>window.innerWidth</code>
+		      </blockquote>				       
+		       <p id="bwidth"></p>
+		      <blockquote>
+		      	     <h2>innerHeight</h2>
+		      	     <code>window.innerHeight</code>
+		      </blockquote>				       
+		       <p id="bheight"></p>
+		</article>
+		<article>
+			<h1>navigator学习</h1>
+			<div id="naviName"></div>
+		</article>
+	</section>
+</body>
+</html>
